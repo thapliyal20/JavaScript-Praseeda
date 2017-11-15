@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title> page three</title>
+		<script>
+			function compute(){
+				tb1=document.getElementById("txtrate");
+				tb2=document.getElementById("txtcount");
+				rate=parseFloat(tb1.value);
+				count=parseInt(tb2.value);
+				amt=rate*count;
+				alert("Please pay "+amt);
+			}
+		</script>
+	</head>
+	<body>
+	<h3> Food Bill </h3>
+		<form>
+			<label>Enter the price of a thaali: <input type="decimal" id="txtrate" /> </label> <br >
+			<label>Enter the number of guests: <input type ="number" id="txtcount" /> </label> <br >
+			<button type="button" onclick="compute()">Calculate Bill</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<title> simple interest</title>
+		<script>
+			function compute(){
+				tb1=document.getElementById("txtprin");
+				tb2=document.getElementById("txtrate");
+				tb3=document.getElementById("txttime");
+				principle=parseFloat(tb1.value);
+				rate=parseFloat(tb2.value);
+				time=parseFloat(tb3.value);
+				si=(principle*rate*time)/100;
+				alert("Simple Interest evaluated to be: "+si);
+			}
+		</script>
+	</head>
+	<body>
+	<h3> Simple Interest Calculation </h3>
+		<form>
+			<label>Enter the Principle: <input type="decimal" id="txtprin" /> </label> <br >
+			<label>Enter the rate: <input type ="decimal" id="txtrate" /> </label> <br >
+			<label>Enter the time: <input type ="decimal" id="txttime" /> </label> <br >
+			<button type="button" onclick="compute()">COMPUTE INTEREST</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE> page two </TITLE>
+		<script>
+		function doTask() {
+			alert("Helloo..!!");
+			userName= prompt("What's you name..??", "Somebody");
+			concern = confirm("Can we be friends..??");
+			if(concern == true) { 
+				document.writeln("Thank you,"+userName);
+			} else {
+				document.writeln("It's OK.."+userName);}}
+
+
+		</script>
+	</HEAD>
+	<BODY>
+		<form>
+			<button onclick="doTask()" type="button"> Click Me</button>
+		</form>
+	</BODY>
+</HTML>

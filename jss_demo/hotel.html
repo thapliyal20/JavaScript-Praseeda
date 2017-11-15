@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> A hotel bill</title>
+		<link rel="stylesheet" href="restStyle.css">
+		<script src="resBillScript.js">
+		</script>
+	</head>
+	<body>
+		<form onsubmit="submitForm()">
+			<table>
+				<tr><td><label for="txtgnm"> Guest Name:</label></td>
+					<td><input type="text" id="txtgnm" required/> </td>
+				</tr>
+				<tr><td><label for="txtchin">check in:</label></td>
+					<td><input type="date" id="txtchin" /> </td>
+				</tr>
+				<tr><td><label for="txtchout">check out:</label></td>
+					<td><input type="date" id="txtchout" /> </td>
+				</tr>
+				<tr><td><label for="txtfb"> Food Bill:</label></td>
+					<td><input type="decimal" id="txtfb" required min="0"/> </td>
+				</tr>
+				<tr><td><label for="txtnet"> Net Bill:</label></td>
+					<td><input type="decimal" id="txtnet" required min="0"/> </td>
+				</tr>
+				<tr><td><label for="txtadv"> Advance:</label></td>
+					<td><input type="decimal" id="txtadv" required min="0" max="5000" /> </td>
+				</tr>
+				<tr><td><label for="seltype" required> Room Type:</label></td>
+					<td><select id="seltype" > 
+							<option value="">---SELECT---</option>
+							<option value="Executive Non-AC">Executive Non-AC</option>
+							<option value="Executive AC">Executive AC</option>
+							<option value="Premium">Premium</option>
+							<option value="Suite">Suite</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td><label for="txtgst"> GST%:</label></td>
+					<td><input type="decimal" id="txtgst" required min="0" max="25" /> </td>
+				</tr>
+				<tr><td><label for="selmode"> Pay Mode:</label></td>
+					<td><select id="selmode" > 
+							<option value="">---SELECT---</option>
+							<option value="cs">Cash</option>
+							<option value="cd">Card</option>
+							<option value="ol">Online</option>
+							<option value="ch">Cheque</option>
+							<option value="off">Office</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td><label>Overall Rating</label></td>
+					<td>
+						<label><input type="radio" id="rb1" value="0" name="rating"/>
+							Not Satisfied
+						</label>
+						<label><input type="radio" id="rb2" value="1" name="rating"/>
+							Satisfied
+						</label>
+						<label><input type="radio" id="rb3" value="2" name="rating"/>
+							Very Much Satisfied
+						</label>
+					</td>
+				</tr>
+				<tr><td >
+				 <label><input type="checkbox" id="chk1" required/>
+				 I accept all terms and conditions.
+				 </label>
+				 </td></tr>
+				 <tr><td colspan="2">
+					<button type="submit">
+						Generate Bill
+					</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> WONDERLA RESERVATION SYSTEM</title>
+		<script src="calcBill.js">
+		</script>
+	</head>
+	<body>
+	<h1>WONDERLA RESERVATION SYSTEM</h1>
+		<form>
+			<table>
+				<tr><td><label for="txtgnm"> Guest Name:</label></td>
+					<td><input type="text" id="txtgnm" /> </td>
+				</tr>
+				<tr><td><label for="txtads"> No. of adults:</label></td>
+					<td><input type="number" id="txtads" /> </td>
+				</tr>
+				<tr><td><label for="txtkid"> No. of Kids:</label></td>
+					<td><input type="number" id="txtkid" /> </td>
+				</tr>
+				<tr><td><label for="seltype"> Ticket Type:</label></td>
+					<td><select id="seltype" > 
+							<option value="">---SELECT---</option>
+							<option value="General">General</option>
+							<option value="Fastrack">Fastrack</option>
+							<option value="Group">Group</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td colspan="2">
+					<button type="button" onclick="calcBill()">
+						Generate Bill
+					</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
